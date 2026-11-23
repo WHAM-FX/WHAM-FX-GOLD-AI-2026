@@ -193,4 +193,13 @@ void OnTick()
       CopyBuffer(rsiHandle, 0, 1, 2, rsi) != 2 ||
       CopyBuffer(atrHandle, 0, 1, 2, atr) != 2)
    {
-     ￼Enter
+   Print("Failed to copy indicator buffers");
+   return;
+if(CopyBuffer(fastHandle, 0, 1, 2, fast) != 2 ||
+   CopyBuffer(slowHandle, 0, 1, 2, slow) != 2 ||
+   CopyBuffer(rsiHandle, 0, 1, 2, rsi) != 2 ||
+   CopyBuffer(atrHandle, 0, 1, 2, atr) != 2)
+{
+   Print("Failed to copy indicator buffers");
+   return;
+}
